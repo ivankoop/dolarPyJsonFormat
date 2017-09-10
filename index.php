@@ -4,9 +4,9 @@
   $json_a = json_decode($string, true);
 
   $json_main_data = $json_a['dolarpy'];
-  $formatted_data = array();
+  $formatted_data['dolarPy'] = array();
   foreach ($json_main_data as $key => $value) {
-    array_push($formatted_data, array('name' => $key, 'compra' => $value['compra'], 'venta' => $value['venta']));
+    array_push($formatted_data['dolarPy'], array('name' => $key, 'compra' => $value['compra'], 'venta' => $value['venta']));
   }
 
   echo json_encode($formatted_data);
